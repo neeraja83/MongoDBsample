@@ -21,7 +21,9 @@ MongoClient.connect('mongodb://admin:admin@ds111565.mlab.com:11565/local_library
 app.get('/bookstore', (req, res) => {
   db.collection('bookstore').save(req.body, (err, result) => {
     if (err) return console.log(err)
-
+if (result) {
+			res.json(result)
+		}
     console.log('saved to database')
     res.send("Saved to database")
       
