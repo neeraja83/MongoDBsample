@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="text-center"><strong>Demo to connect Mlab Sandbox- MongoDB and the Front end Angular code</strong></div><br><br>
+<form action="/bookstore" method="POST">
+    <div class="container">
+   <div class="jumbotron text-center" ng-app = "">
+    <p>Hello <span ng-bind = "fname"></span>&nbsp;<span ng-bind = "lname"></span>!</p>
+    <p>Enter your First Name:<input type="text" ng-model="fname" placeholder="Fname" name="fname"></p>
+    <p>Enter your Last Name:<input type="text" ng-model="lname"placeholder="lname" name="lname"></p>
+    <p>Enter your Email:<input type="text" placeholder="email" name="email"></p>
+    <p>Enter your Pwd:<input type="text" placeholder="pwd" name="pwd"></p>
+    <p>Enter your Security Question:<input type="text" placeholder="secq" name="secq"></p>
+    <p>Enter your Security Answer:<input type="text" placeholder="seca" name="seca"></p><br><br>
+    <button type="submit">Submit</button>
+       
+   </div>
+    </div>
+</form>
+</body>
+</html>
