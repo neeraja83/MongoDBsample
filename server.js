@@ -29,6 +29,6 @@ app.post('/bookstore', (req, res) => {
 })
 
 app.listen(port);
-console.log('server running'+ port);
+res.send('server running'+ port);
 
 
