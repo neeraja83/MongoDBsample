@@ -18,7 +18,7 @@ MongoClient.connect('mongodb://admin:admin@ds111565.mlab.com:11565/local_library
   
 })
 
-app.get('/bookstore', (req, res) => {
+app.post('/bookstore', (req, res) => {
   db.collection('bookstore').save(req.body, (err, result) => {
     if (err) return console.log(err)
 if (result) {
