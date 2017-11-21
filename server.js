@@ -2,7 +2,8 @@ const express = require('express')
 const bodyParser= require('body-parser')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
-
+var cors = require('cors')
+app.use(cors())
 
 var db
 
