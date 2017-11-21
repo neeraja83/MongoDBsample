@@ -31,10 +31,8 @@ app.get('/', (req, res) => {
 app.post('/bookstore', (req, res) => {
   db.collection('bookstore').save(req.body, (err, result) => {
     if (err) return console.log(err)
-if (result) {
-			res.json(result)
-		}
-    console.log('saved to database')
+
+    console.log('saved to database'+ req.body.fname)
     res.send("Saved to database")
       
   })
