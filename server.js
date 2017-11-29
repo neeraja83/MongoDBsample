@@ -26,6 +26,7 @@ app.use(function(req, res, next) {
 
 app.get('/', (req, res) => {
   console.log('Getting your index page')
+	  res.send('hello world')
   res.sendFile(__dirname + '/index.html')
   })
 
