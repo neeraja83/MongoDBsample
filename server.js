@@ -2,8 +2,8 @@ const express = require('express')
 const bodyParser= require('body-parser')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
-var cors = require('cors')
-app.use(cors())
+//var cors = require('cors')
+//app.use(cors())
 
 var db
 
@@ -18,11 +18,7 @@ MongoClient.connect('mongodb://admin:admin@ds111565.mlab.com:11565/local_library
 
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+
 
 app.get('/', (req, res) => {
   console.log('Getting your index page')
