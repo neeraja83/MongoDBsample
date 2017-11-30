@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mongolab/express-mongodb-setup.git"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
