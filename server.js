@@ -1,7 +1,8 @@
 const express = require('express')
 const bodyParser= require('body-parser')
-const app = express()
+
 const MongoClient = require('mongodb').MongoClient
+const app = express()
 //var cors = require('cors')
 //app.use(cors())
 
@@ -13,15 +14,10 @@ MongoClient.connect('mongodb://admin:admin@ds111565.mlab.com:11565/local_library
 	var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
-  });
-	
   })
-  
 })
 
 app.use(bodyParser.urlencoded({extended: true}))
-
-
 
 app.get('/', (req, res) => {
   console.log('Getting your index page')
@@ -32,14 +28,12 @@ app.get('/', (req, res) => {
 app.post('/bookstore', (req, res) => {
   db.collection('bookstore').save(req.body, (err, result) => {
     if (err) return console.log(err)
-
     console.log('saved to database'+ req.body.fname)
     res.send("Saved to database")
       
   })
 })
 
-//app.listen(port);
-//res.send('server running'+ port);
+
 
 
