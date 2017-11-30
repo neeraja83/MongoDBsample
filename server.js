@@ -10,8 +10,11 @@ var db
 MongoClient.connect('mongodb://admin:admin@ds111565.mlab.com:11565/local_library', (err, database) => {
   if (err) return console.log(err)
   db = database
-	 app.listen(process.env.PORT || 8080, function() {
-    console.log('listening on 8080')
+	var server = app.listen(process.env.PORT || 8080, function () {
+    var port = server.address().port;
+    console.log("App now running on port", port);
+  });
+	
   })
   
 })
